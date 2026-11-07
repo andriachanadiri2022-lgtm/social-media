@@ -32,7 +32,7 @@ The publishable key is intended for browser use; Row Level Security in the schem
    git push -u origin main
    ```
 
-2. In the repository, open **Settings → Secrets and variables → Actions** and add repository secrets named `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`.
+2. In the repository, open **Settings → Secrets and variables → Actions → Variables** and add repository variables named `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`. The publishable key is intended for browser use; never store a Supabase secret/service-role key in the app.
 3. In **Settings → Pages**, set the build and deployment source to **GitHub Actions**.
 4. In Supabase, open **Authentication → URL Configuration**. Set **Site URL** to your GitHub Pages URL (for example, `https://your-name.github.io/your-repository/`) and add that same URL to the allowed redirect URLs. For local signup confirmations, also allow `http://localhost:5173/**` and `http://127.0.0.1:5173/**`.
 5. Push a commit to `main` or run the **Deploy to GitHub Pages** workflow manually from the Actions tab. The deployed URL appears in the workflow run.
