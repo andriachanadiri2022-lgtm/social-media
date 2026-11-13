@@ -260,7 +260,7 @@ function App() {
             <li><span>02</span><div><strong>Set up your database</strong><small>Run the SQL in <code>supabase/schema.sql</code>.</small></div></li>
             <li><span>03</span><div><strong>Add your local settings</strong><small>Copy <code>.env.example</code> to <code>.env.local</code> and fill it in.</small></div></li>
           </ol>
-          <p className="setup-footnote">For GitHub Pages, add the same values as repository Actions secrets: <code>VITE_SUPABASE_URL</code> and <code>VITE_SUPABASE_ANON_KEY</code>.</p>
+          <p className="setup-footnote">For GitHub Pages, add the same values as repository Actions variables: <code>VITE_SUPABASE_URL</code> and <code>VITE_SUPABASE_PUBLISHABLE_KEY</code>.</p>
         </div>
       </main>
     );
