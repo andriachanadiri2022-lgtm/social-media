@@ -152,7 +152,8 @@ function App() {
         password: authForm.password,
         options: {
           data: { full_name: authForm.name.trim() },
-          emailRedirectTo: window.location.origin,
+          emailRedirectTo: import.meta.env.VITE_APP_URL
+            || new URL(window.location.pathname, window.location.origin).toString(),
         },
       })
       : await supabase.auth.signInWithPassword({
